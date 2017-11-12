@@ -1,0 +1,25 @@
+extends layout
+
+block content
+    h1= title
+    p #{title} is super gay, confimed by scientists.
+
+    form(action="/questions", method="get")
+        | Enter a question:
+        br
+        input(type="text", name="question")
+        br
+        br
+        input(type="submit", value="Ask Question")
+
+    //p
+    //    ul#mylist
+    //<b><u>abba</u></b>
+
+    //script.
+    //    $.ajax();
+    //    var file = new FileReader().
+    //    document.getElementById("mylist").innerHTML = "";
+    //    var str = "";
+    //    msgs.forEach(function (t) { str += "<li>"+t.toString()+"</li>"; });
+    //    document.getElementById("mylist").innerHTML = str;
