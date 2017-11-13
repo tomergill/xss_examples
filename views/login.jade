@@ -1,0 +1,21 @@
+extends layout
+
+block content
+    h1 Login:
+    form(action=nextLink)
+        table
+            tr
+            td User Name:
+            td
+                input(type="text", name="uname")
+
+            tr
+            td Password:
+            td
+                input(type="text", name="pass", id="pass")
+
+        br
+        br
+        input(type="submit",  value="Login", onclick="<script>alert('Login successful!');</script>")
+
+

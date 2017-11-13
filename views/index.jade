@@ -4,10 +4,14 @@ block content
     //h1= messages[0]//title
     //p #{title} is super gay, confimed by scientists.
 
+    a(href="http://localhost:3000/login?nextlink=http://localhost:3000/") Click to Login
+
     form(action="/questions", method="get")
         | Enter a question:
-        br
         input(type="text", name="question")
+        br
+        | Enter your name:
+        input(type="text", name="asker")
         br
         br
         input(type="submit", value="Ask Question")

@@ -1,12 +1,12 @@
 extends layout
 
 block content
-    h1  You asked about: #{question}!
+    h1  You asked about: #{params.question}!
     p
         h1 Results:
         .results bla bla bla
 
-    script alert(1);
+    p Your Name is #{params.asker} :)
 
     //p
     //    ul#mylist
