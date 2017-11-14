@@ -16,9 +16,19 @@ block content
         br
         input(type="submit", value="Ask Question")
 
+    -var a = "'"
+    - for msg in data.msgList
+       - a += msg + "<br />"
+    - a += "'"
 
     h1 Messages
     p
         div#lists
-            for msg in data.msgList
-                div.item #{msg}
+
+    script.
+        function func() {
+            //var a = !{data.msgList};
+            var str = !{a};//"";
+            //a.forEach(function (t) { str += t + "<br/>"; });
+            document.getElementById("lists").innerHTML = str;
+        }

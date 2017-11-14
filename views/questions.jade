@@ -1,21 +1,33 @@
 extends layout
 
 block content
-    h1  You asked about: #{params.question}!
+    //h1  You asked about: #{params.question}!
     p
         h1 Results:
         .results bla bla bla
 
-    p Your Name is #{params.asker} :)
+    //p Your Name is #{params.asker} :)
 
-    //p
-    //    ul#mylist
-    //<b><u>abba</u></b>
+    | Here will be an attack
+    #mydiv
 
-    //script.
-    //    $.ajax();
-    //    var file = new FileReader().
-    //    document.getElementById("mylist").innerHTML = "";
-    //    var str = "";
-    //    msgs.forEach(function (t) { str += "<li>"+t.toString()+"</li>"; });
-    //    document.getElementById("mylist").innerHTML = str;
+
+    script.
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        }
+
+        function func() {
+            var questionQuery = getParameterByName("question");
+            var nameQuery = getParameterByName("asker");
+            document.getElementById("mydiv").innerHTML = questionQuery;
+            document.getElementById("mydiv").innerHTML += nameQuery;
+        }
+
+

@@ -7,7 +7,7 @@ router.get('/', function (req, res, next) {
     var msgList = JSON.parse(fs.readFileSync('./resources/messages.json', 'utf-8'));
     console.log(msgList);
     res.render('index', {data: {msgList: msgList}});
-    console.log(res);
+    //console.log(res);
 });
 
 
