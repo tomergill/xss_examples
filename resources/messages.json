@@ -1,1 +1,1 @@
-["abba","alla","awwa","<div onmouseover=\"alert(42)\"> ATTACKER MESSAGE</div>"]
+["abba","alla","awwa","<img src=\"bulbul\" onerror=\"alert(256)\" />"]
