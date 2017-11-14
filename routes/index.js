@@ -5,7 +5,11 @@ var fs = require('fs');
 /* GET home page. */
 router.get('/', function (req, res, next) {
     var msgList = JSON.parse(fs.readFileSync('./resources/messages.json', 'utf-8'));
-    console.log(msgList);
+    console.log(req.query.newMessage);
+    if (req.query.newMessage) {
+        msgList.push(req.query.newMessage);
+        fs.writeFileSync('./resources/messages.json',JSON.stringify(msgList));
+    }
     res.render('index', {data: {msgList: msgList}});
     //console.log(res);
 });

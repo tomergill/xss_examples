@@ -23,6 +23,13 @@ block content
 
     h1 Messages
     p
+        form(action="/", method="get")
+            h3 Post a message:
+            input(type="text", name="newMessage", value="New Message")
+            br
+            br
+            input(type="submit", value="Post Message")
+    p
         div#lists
 
     script.
