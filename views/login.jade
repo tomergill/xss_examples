@@ -2,7 +2,7 @@ extends layout
 
 block content
     h1 Login:
-    form(action=nextLink)
+    form(action=nextLink, method="post")
         table
             tr
             td User Name:
@@ -17,5 +17,3 @@ block content
         br
         br
         input(type="submit",  value="Login", onclick="<script>alert('Login successful!');</script>")
-
-
